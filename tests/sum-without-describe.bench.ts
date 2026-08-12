@@ -1,5 +1,5 @@
-import { bench } from "vitest";
+import { it } from "vitest";
 
-bench("sum", () => {
-  1 + 1;
+it("sum", async ({ bench }) => {
+  await bench("bench 1", () => 1 + 1).run();
 });
